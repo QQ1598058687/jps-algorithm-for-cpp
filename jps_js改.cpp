@@ -1,4 +1,4 @@
-// PathFinding.js翻译版 jps提取并翻译成c++
+// PathFinding.js翻译版 jps提取并修改了部分bug 翻译成c++
 // by桔皮沙拉 qq1598058687
 //来源PathFinding.js
 #include <iostream>
