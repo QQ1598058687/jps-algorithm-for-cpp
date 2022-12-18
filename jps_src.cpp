@@ -1,3 +1,6 @@
+//来源https://github.com/hvillanua/jps
+//感谢hvillanua的封装的代码，太棒了
+//尝试修改了对角有一个可通过，两个则不能穿过
 #include <cmath>
 #include <unordered_map>
 #include <vector>
@@ -77,7 +80,7 @@ const static Location DIRS[]{
 	{1, -1}, {-1, -1}
 };
 
-const static char*dir_str[] = { "��","��","��","��","�K","�L","�J","�I" };
+const static char*dir_str[] = { "¡ú","¡û","¡ü","¡ý","¨K","¨L","¨J","¨I" };
 
 #ifdef		PRINT_CODE
 const char* find_str(const Location &r)
@@ -141,7 +144,7 @@ bool Grid::forced(const Location& loc, const Location& parent, const Location& t
 		if ((dir.x == travel_dir.x && dir.y == -travel_dir.y) ||
 			(dir.x == -travel_dir.x && dir.y == travel_dir.y)) {
 #ifdef		PRINT_CODE
-			cout << "��:" << travel_dir << dir << endl;
+			cout << "¡Á:" << travel_dir << dir << endl;
 #endif
 			return true;
 
@@ -150,7 +153,7 @@ bool Grid::forced(const Location& loc, const Location& parent, const Location& t
 	// Horizontal or vertical neighbour
 	else if (dir.x != 0 && dir.y != 0) {
 #ifdef		PRINT_CODE
-		cout << "��:" << travel_dir << dir << endl;
+		cout << "£«:" << travel_dir << dir << endl;
 #endif
 		return true;
 	}
